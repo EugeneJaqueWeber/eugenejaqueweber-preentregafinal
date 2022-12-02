@@ -1,9 +1,9 @@
-const nombre = prompt (`ingrese un nombre de usuario`)
+ const nombre = prompt (`ingrese un nombre de usuario`)
 
-let usuarioIngresado = prompt (`ingrese un usuario`)
-    const usuario = "eugenejaqueweber"
-let contraseñaIngresada = prompt (`ingrese una contraseña`)
-    const contraseña = 1234567
+ let usuarioIngresado = prompt (`ingrese un usuario`)
+     const usuario = "eugenejaqueweber"
+ let contraseñaIngresada = prompt (`ingrese una contraseña`)
+     const contraseña = 1234567
 
 if ( usuarioIngresado === usuario ) {
     alert ("ah ingresado correctamente el usuario")
@@ -17,10 +17,13 @@ if ( Number (contraseñaIngresada) === contraseña ) {
     console.log ("ah ingresado correctamente la contraseña")
 } else {
     alert ("ah ingresado erroneamente la contraseña")
-    console.log ("ah ingresado erroneamente la contraseña")
-}
+    console.log ("ah ingresado erroneamente la contraseña")}
+
 if ( usuarioIngresado === usuario && Number (contraseñaIngresada) === contraseña ) {
-    alert (`¡Bienvenido a mi pagina, ${nombre}!`)
+    function nombreDeUsuario (nombre) {
+       alert (`Bienvenido a mi pagina! ${nombre}`)
+}
+    nombreDeUsuario (nombre)
 } else {
     alert ("ah ingresado erroneamente el usuario y la contraseña")
 }
@@ -52,10 +55,31 @@ if ( contraseñaIngresada.length >= lectorDeContraseña ) {
     alert ("tu contraseña es segura")
 } else {
     alert ("tu contraseña es insegura, no cumple con los 8 caracteres")
-    const nuevaContraseña = prompt ("desea cambiarla? coloque no si decide -no- hacerlo.") 
+     const nuevaContraseña = prompt ("desea cambiarla? coloque no si decide -no- hacerlo.") 
     if ( nuevaContraseña.length >= lectorDeContraseña ) {
         alert ("tienes una contraseña nueva")
     } else {
         alert ("al no ingresar una nueva contraseña, recuerda que es insegura")
     }
 }
+
+const edadNecesaria = 15
+let edadDelUsuario = prompt (`ingrese su edad`)
+
+function registroDelUsuario ( edadDelUsuario ) {
+    alert (`usted tiene ${edadDelUsuario}`)
+}
+
+registroDelUsuario ( edadDelUsuario )
+
+if ( edadDelUsuario > edadNecesaria) {
+    alert ("tiene permiso para visitar esta pagina")
+} else {
+    alert ("no tiene permiso para visitar esta pagina, necesita ser mayor a 15 o tener el permiso de los padres")
+} 
+
+function datosDelUsuario (nombre, nuevoUsuario, nuevaContraseña, edadDelUsuario) {
+    console.log (`Nombre: ${nombre}`)
+    console.log (`Edad: ${edadDelUsuario}`)
+}
+datosDelUsuario (nombre, edadDelUsuario)
